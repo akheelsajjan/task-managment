@@ -1,0 +1,39 @@
+
+   
+   <div *ngIf="(task$ | async) as tasks">
+    <ng-container *ngIf="tasks.length > 0;else noTask" >
+      <table class="table" >
+        <thead >
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Task Name</th>
+            <th scope="col">To Do</th>
+            <th scope="col">In Progress</th>
+            <th scope="col">Done</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasks; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{task.title}}</td>
+            <td><i *ngIf="task.status === 'OPEN'" class="bi bi-check2-all fs-4"></i></td>
+            <td><i *ngIf="task.status === 'IN_PROGRESS'" class="bi bi-check2-all fs-4"></i></td>
+            <td><i *ngIf="task.status === 'DONE'" class="bi bi-check2-all fs-4"></i></td>
+            <td> <i class="bi bi-pencil-square fs-4" (click)="updateTask(task.id)" ></i></td>
+            <td><i class="bi bi-trash fs-4" (click)="deleteTask(task.id)" ></i></td>
+          </tr>
+        </tbody>
+    </table>
+    </ng-container>
+    <ng-template #noTask> 
+      <div class="no-task">
+        <h2> No tasks available</h2>
+        <h6>Please add tasks...</h6>
+      </div>
+    </ng-template>
+    
+   </div>
+   
+

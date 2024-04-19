@@ -1,0 +1,19 @@
+.container{
+    margin-top: 1rem;
+}
+
+.add-task-button{
+    margin-top: 1rem;
+}
+
+.task-description{
+    margin-top: 1rem;
+}
+
+.show-tasks{
+    margin-left: 1rem;
+}
+
+.log-out{
+    cursor: pointer;
+}

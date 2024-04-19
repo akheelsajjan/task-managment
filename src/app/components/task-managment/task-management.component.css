@@ -1,0 +1,16 @@
+.container{
+    margin-top: 1rem;
+}
+
+
+.bi:hover{
+    cursor: pointer;
+}
+
+.no-task{
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    align-items: center;
+    flex-direction: column;
+}
