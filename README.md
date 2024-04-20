@@ -8,6 +8,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ##About
 
-1) The application contains UI for task-management API present in 
+1) The application contains UI for task-management API present in https://github.com/akheelsajjan/nestJS-task-management this repo
 2) Application is authenticated
 3) One can create task, update the task & delete them as well.
